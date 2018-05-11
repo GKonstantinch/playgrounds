@@ -12,25 +12,25 @@ class ViewController : UIViewController {
         super.viewDidLoad()
         DispatchQueue.global(qos: .background).async {
             DispatchQueue.main.sync {
-                print("6")
+                print("2")
             }
-            print("9")
+            print("3")
         }
         print("1")
         DispatchQueue.global(qos: .background).async {
             DispatchQueue.main.async {
-                print("8")
+                print("3")
             }
-            print("5")
+            print("2")
         }
-        print("2")
+        print("1")
         DispatchQueue.global(qos: .background).sync {
             DispatchQueue.main.async {
-                print("7")
+                print("2")
             }
-            print("3")
+            print("1")
         }
-        print("4")
+        print("1")
     }
 }
 
